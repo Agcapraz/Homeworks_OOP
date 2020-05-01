@@ -1,45 +1,45 @@
 class Account:
     def __init__(self, id, Name, Balance=0):
-        self.id = id
-        self.Name = Name
+        self.__id = id
+        self.__Name = Name
         if Balance>=0:
-            self.Balance = Balance
+            self.__Balance = Balance
 
     def __str__(self):
         return "Account[" + \
-               "id=" + str(self.id) + "," + \
-               "name=" + self.Name +"," +\
-               " Balance=" + str(self.Balance) +\
+               "id=" + str(self.__id) + "," + \
+               "name=" + self.__Name + "," + \
+               " Balance=" + str(self.__Balance) + \
                "]"
 
     def getID(self):
-        return self.id
+        return self.__id
 
     def getName(self):
-        return self.Name
+        return self.__Name
 
     def getBalance(self):
-        return self.Balance
+        return self.__Balance
 
     def credit(self, Amount):
         if Amount>=0:
-            self.Balance = self.Balance + Amount
-        return self.Balance
+            self.__Balance = self.__Balance + Amount
+        return self.__Balance
 
     def debit(self, Amount):
-        if Amount <= self.Balance:
-            self.Balance= self.Balance-Amount
+        if Amount <= self.__Balance:
+            self.__Balance= self.__Balance - Amount
         else:
             print ("amount exceeded")
-        return self.Balance
+        return self.__Balance
 
     def transferTo(self, AnotherAccount, Amount):
-        if self.Balance >= Amount :
-            self.Balance -= Amount
+        if self.__Balance >= Amount :
+            self.__Balance -= Amount
             AnotherAccount.credit(Amount)
         else:
             print("Amount exceeded")
-        return self.Balance
+        return self.__Balance
 
 
 # ===================== Running classes ===============
