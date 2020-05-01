@@ -1,35 +1,40 @@
 class Date:
-    def __init__(self, day=[1,31], month=[1,12], year=[1900,9999]):
-        self.day= day
-        self.month= month
-        self.year=year
+
+
+    def __init__(self, day = [1,31], month = [1,12], year = [1900,9999]):
+        self.__day= day
+        self.__month= month
+        self.__year=year
+
 
     def __str__(self):
-        return "Date[" + \
-               "day=" + self.day + "," + \
-               "month=" +self.month + "," + \
-               "year=" + self.year + \
-               "]"
+        return " Date[ " + \
+               " day= " + str(self.__day) + " , " + \
+               " month = " + str(self.__month) + " , " + \
+               " year = " + str(self.__year) + \
+                "] "
+
 
     def getday(self):
-        return self.day
+        return self.__day
 
     def getmonth(self):
-        return self.month
+        return self.__month
 
     def getyear(self):
-        return self.year
+        return self.__year
 
     def setday(self, newday):
-        self.day= newday
+        self.__day= newday
 
     def setmonth(self, newmonth):
-        self.month= newmonth
+        self.__month= newmonth
 
     def setyear(self, newyear):
-        self.year= newyear
+        self.__year= newyear
+
 
     def setdate(self, newday, newmonth, newyear):
-        self.day= newday
-        self.month= newyear
-        self.year= newyear
+        self.__day= newday
+        self.__month= newyear
+        self.__year= newyear
