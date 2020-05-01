@@ -1,39 +1,39 @@
 class invoiceItem:
 
     def __init__(self, id, desc, qty, unitPrice):
-        self.id= id
-        self.desc= desc
-        self.qty= qty
-        self.unitPrice= unitPrice
+        self.__id= id
+        self.__desc= desc
+        self.__qty= qty
+        self.__unitPrice= unitPrice
 
     def __str__(self):
         return "invoiceItem [" + \
-               "id=" + self.id + "," + \
-               "desc=" +self.desc + "," + \
-               "qty=" + str(self.qty) + "," + \
-               "unitPrice=" + str(self.unitPrice) + \
+               "id=" + self.__id + "," + \
+               "desc=" + self.__desc + "," + \
+               "qty=" + str(self.__qty) + "," + \
+               "unitPrice=" + str(self.__unitPrice) + \
                "]"
 
     def getid(self):
-        return self.id
+        return self.__id
 
     def getdesc(self):
-        return self.desc
+        return self.__desc
 
     def getqty(self):
-        return self.qty
+        return self.__qty
 
     def setqty(self, Newqty):
-        self.qty = Newqty
+        self.__qty = Newqty
 
     def getunitPrice(self):
-        return self.unitPrice
+        return self.__unitPrice
 
     def setunitPrice(self, NewunitPrice):
-        self.unitPrice = NewunitPrice
+        self.__unitPrice = NewunitPrice
 
     def getTotal(self):
-        return self.qty*self.unitPrice
+        return self.__qty * self.__unitPrice
 
 
 product1=invoiceItem("computer","sonyvoio",1,1000)
