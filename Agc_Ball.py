@@ -2,11 +2,11 @@ class Ball:
 
 
     def __init__(self, x, y, Radius, xDelta , yDelta):
-        self.x= x
-        self.y= y
-        self.Radius= Radius
-        self.xDelta= xDelta
-        self.yDelta= yDelta
+        self.__x= x
+        self.__y= y
+        self.__Radius= Radius
+        self.__xDelta= xDelta
+        self.__yDelta= yDelta
 
 
     def __str__(self):
@@ -16,52 +16,52 @@ class Ball:
                "]")
 
     def getx(self):
-        return self.x
+        return self.__x
 
 
     def setx(self,xNew):
-        self.x= xNew
+        self.__x= xNew
 
 
     def gety(self):
-        return self.y
+        return self.__y
 
 
     def sety(self, yNew):
-        self.y= yNew
+        self.__y= yNew
 
 
     def getRadius(self):
-        return self.Radius
+        return self.__Radius
 
 
     def setRadius(self, RadiusNew):
-         self.Radius= RadiusNew
+         self.__Radius= RadiusNew
 
 
     def getxDelta(self):
-        return self.xDelta
+        return self.__xDelta
 
 
     def setxDelta(self, xDeltaNew):
-        self.xDelta= xDeltaNew
+        self.__xDelta= xDeltaNew
 
 
     def getyDelta(self):
-        return self.yDelta
+        return self.__yDelta
 
     def setyDelta(self,yDeltaNew):
-        self.yDelta= yDeltaNew
+        self.__yDelta= yDeltaNew
 
 
     def Move(self, x, y):
-        self.x += self.xDelta
-        self.y += self.yDelta
+        self.__x += self.__xDelta
+        self.__y += self.__yDelta
 
 
     def reflectionHorizontal(self):
-        self.xDelta -= self.xDelta
+        self.__xDelta -= self.__xDelta
 
 
     def reflectionVertical(self):
-        self.yDelta -= self.yDelta
+        self.__yDelta -= self.__yDelta
