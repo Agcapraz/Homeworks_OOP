@@ -2,39 +2,38 @@ import math
 
 class Circle:
 
+
     def __init__(self, Radius = 1.0 ):
-        self.Radius = Radius
+        self.__Radius = Radius
+
 
     def __str__(self):
         return "Circle[" + \
-               "Radius=" + str(self.radius) + "," + \
+               "Radius=" + str(self.__Radius) + "," + \
                "]"
 
+
     def getRadius(self):
-        return self.Radius
+        return self.__Radius
+
 
     def setRadius(self, RadiusNew):
-        self.Radius= RadiusNew
+        self.__Radius= RadiusNew
 
-    def getCircumferenceCircle(self, CircumferenceCircle):
-        self.CircumferenceCircle= 2*math.pi*self.Radius
-        return Radius
+
+    def getCircumferenceCircle(self):
+        return 2 * math.pi * self.__Radius
+
+
 
 Circle1 = Circle(2)
 Circle2 = Circle(5)
 
+
 print(Circle)
 
-print(Circle1.Radius)
-print(Circle2.Radius)
-print(("new radius"))
-#print(Circle1.Radius(3.0))
-
-#print(Circle1.CircumferenceCircle)
-#print(Circle2.CircumferenceCircle)
-#print(Circle2.Radius)
-#print(Circle1())
-
-
-#print(Circle2.CircumferenceCircle)
+print(" Circle1 circumference is ")
+print(Circle1.getCircumferenceCircle())
+print(" Circle2 circumference is ")
+print(Circle2.getCircumferenceCircle())
 print(Circle)
